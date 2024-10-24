@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Your Cart</h1>
+    </header>
+
+    <nav>
+
+        <ul class="btn">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+        </ul>
+    </nav>
+
+
+    <section id="cart">
+        <div id="cart-items">
+            <!-- Cart items will be displayed here -->
+        </div>
+        <div id="total">
+            <!-- Total price will be displayed here -->
+        </div>
+        <button id="checkout-btn">Checkout</button>
+        <button id="pay-with-gpay-btn">Pay with UPI</button>
+    </section>
+    <div id="upi-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Enter UPI ID</h2>
+            <input type="text" id="upi-id" placeholder="Enter your UPI ID" required>
+            <button id="submit-upi">Submit</button>
+            <p id="payment-message"></p>
+        </div>
+    </div>
+
+    
+    <div id="thank-you-message" style="display:none;">
+        <h2>Thank You for Your Purchase!</h2>
+        <p>Your order has been successfully processed.</p>
+    </div>
+
+    <script>
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartDisplay = document.getElementById('cart-items');
+        const totalDisplay = document.getElementById('total');
+
+        function updateCartDisplay() {
+            cartDisplay.innerHTML = '';
+            if (cart.length === 0) {
+                cartDisplay.innerHTML = '<p>Your cart is empty!</p>';
+                totalDisplay.textContent = '';
+                return;
+            }
+            let total = 0;
+            cart.forEach((item, index) => {
+                const itemDiv = document.createElement('div');
+                itemDiv.textContent = `${item.name} - Rs.${item.price}`;
+                const removeBtn = document.createElement('button');
+                removeBtn.textContent = 'Remove';
+                removeBtn.addEventListener('click', () => {
+                    removeFromCart(index);
+                });
+                itemDiv.appendChild(removeBtn);
+                cartDisplay.appendChild(itemDiv);
+                total += item.price;
+            });
+            totalDisplay.textContent = `Total: Rs.${total}`;
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartDisplay();
+        }
+        updateCartDisplay();
+        const payWithGpayBtn = document.getElementById('pay-with-gpay-btn');
+        const upiModal = document.getElementById('upi-modal');
+        const closeModal = document.getElementsByClassName('close')[0];
+        const submitUpi = document.getElementById('submit-upi');
+        const paymentMessage = document.getElementById('payment-message');
+
+        payWithGpayBtn.addEventListener('click', () => {
+            upiModal.style.display = 'block'; 
+        });
+        closeModal.onclick = function() {
+            upiModal.style.display = 'none'; 
+        };
+        window.onclick = function(event) {
+            if (event.target === upiModal) {
+                upiModal.style.display = 'none'; 
+            }
+        };
+
+        submitUpi.addEventListener('click', () => {
+            const upiId = document.getElementById('upi-id').value;
+            (upiId) 
+               setTimeout(() => {
+                    paymentMessage.textContent = 'Payment successful! Thank you for your purchase.';
+                    paymentMessage.style.color = 'green';
+                    
+                    localStorage.removeItem('cart');
+                    updateCartDisplay();
+                }, 1000); 
+            
+        });
+        document.getElementById('checkout-btn').addEventListener('click', () => {
+            cartDisplay.style.display = 'none';
+            totalDisplay.style.display = 'none';
+            document.getElementById('thank-you-message').style.display = 'block';
+            localStorage.removeItem('cart');
+        });
+    </script>
+
+</body>
+</html>

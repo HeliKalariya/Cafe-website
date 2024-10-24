@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helly's Haven</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <section class="home">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">Helly's Haven</div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About Us</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#service" class="nav-link">Services</a></li>
+                    <li><a href="#review" class="nav-link">Reviews</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="cart.html" id="cart-link">Cart</a></li>
+                </ul>
+            </nav>
+
+            <div id="home">
+                <div class="content">
+                    <h1>Pancakes <br><span>With Blueberries</span></h1>
+                    <p>Pancakes with blueberries in our restaurant at a special price:</p>
+                    <div class="price">
+                        <span class="old-price">Rs.250</span>
+                        <span class="new-price">Rs.160</span>
+                    </div>
+                    <button class="buy-btn" onclick="addToCart('Blueberries Pancakes', 160)">Buy</button>
+                </div>
+                <div class="image-section">
+                  <img src="/images/pancake6.jpg" alt="Pancakes with Blueberries"> 
+                </div>
+            </div>
+
+            <div class="info-boxes">
+                <div class="info-box">
+                    <p>11:00 am - 12:00pm</p>
+                    <p>Working hours</p>
+                </div>
+                <div class="info-box">
+                    <p>Kailash Baug</p>
+                    <p>Our location</p>
+                </div>
+                <div class="info-box">
+                    <p>+917865490876</p>
+                    <p>Call online</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="/images/about.jpg" alt="Pancakes">
+                </div>
+                <div class="about-text">
+                    <h2>About us</h2>
+                    <h3>Helly's Haven Cafe</h3>
+                    <p>At Heli’s Haven, every detail is carefully crafted to make you feel at home. Our menu is a celebration of the finest ingredients, with each dish and drink prepared with love and attention to detail.It’s not just about serving coffee; it’s about creating connections, sharing smiles, and making memories.</p>
+                    <button class="menu-btn" onclick="window.location='#menu'">More about Menu</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="service">
+        <div class="heading-container">
+        <h2 class="section-heading">Services</h2>
+        </div>
+        <div class="delivery-container">
+            <div class="delivery-box">
+                <div class="icon">🛍️</div>
+                <h3>Order</h3>
+                <p>To place an order, simply choose your favorite items from our menu, and we'll prepare them fresh just for you. Enjoy easy and secure payment options, and let us handle the rest with prompt delivery or pick-up!</p>
+            </div>
+            <div class="delivery-box">
+                <div class="icon">🥡 </div>
+                <h3>Take Away</h3>
+                <p>Craving something delicious on the go? Order ahead and pick up your freshly prepared favorites with our quick and convenient take-away service.</p>
+            </div>
+            <div class="delivery-box active">
+                <div class="icon">🚚</div>
+                <h3>Delivery</h3>
+                <p>Enjoy our delicious dishes from the comfort of your home. Order online, and we’ll deliver your meal hot and fresh right to your doorstep.</p>
+            </div>
+            <div class="delivery-box">
+                <div class="icon"> 📅</div>
+                <h3>Book A Table</h3>
+                <p>Looking for the perfect spot to dine? Reserve a table with us for an unforgettable dining experience in a cozy and welcoming atmosphere.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu">
+        <div class="container">
+            <h2>Menu</h2>
+            <div class="menu-categories">
+                <ul>
+                    <li><a href="#" class="active" data-category="pasta">Pasta</a></li>
+                    <li><a href="#" data-category="pizza">Pizza</a></li>
+                    <li><a href="#" data-category="coffee">Coffee</a></li>
+                    <li><a href="#" data-category="desserts">Desserts</a></li>
+                </ul>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-item" data-category="pasta">
+                    <img src="/images/pasta1.jpg" alt="Pasta 1">
+                    <h3>Mac and cheese</h3>
+                    <p class="minfo">A creamy pasta dish with macaroni and a rich, flavourful sauce.</p>
+                    <p class="price">Rs.430</p>
+                    <button class="buy-btn" onclick="addToCart('Mac and Cheese', 430)">Buy</button>
+                </div>
+                <div class="menu-item" data-category="pasta">
+                    <img src="/images/pasta2.jpg" alt="Pasta 2">
+                    <h3>Alfredo Pasta</h3>
+                    <p class="minfo">A velvety blend of tender pasta coated in rich Alfredo sauce.</p>
+                    <p class="price">Rs.360</p>
+                    <button class="buy-btn" onclick="addToCart('Alfredo Pasta', 360)">Buy</button>
+                </div>
+                <div class="menu-item" data-category="pasta">
+                    <img src="/images/pasta3.jpeg" alt="Pasta 2">
+                    <h3>Aglio Olio </h3>
+                    <p class="minfo">Enjoy cooked pasta tossed with sauteed garlic, chilli flakes and a drizzle of olive oil</p>
+                    <p class="price">Rs.349</p>
+                    <button class="buy-btn" onclick="addToCart('Aglio Olio', 349)">Buy</button>
+                </div>
+                <div class="menu-item" data-category="pasta">
+                    <img src="/images/pasta4.jpg" alt="Pasta 2">
+                    <h3>Red Sauce Pasta</h3>
+                    <p class="minfo">A rich and tangy pasta dish simmered in a vibrant tomato sauce, bursting with flavor.</p>
+                    <p class="price">Rs.280</p>
+                    <button class="buy-btn" onclick="addToCart('Red Sauce Pasta', 280)">Buy</button>
+                </div>
+                <div class="menu-item" data-category="pizza">
+                    <img src="/images/pizza1.jpg" alt="pizza 1">
+                    <h3>Paneer tikka pizza</h3>
+                    <p class="minfo">Enjoy the deliciousness of paneer with colourful veggies and mouth watering cheese in every bite</p>
+                    <p class="price">Rs.499</p>
+                    <button class="buy-btn" onclick="addToCart('Paneer tikka pizza', 499)">Buy</button>
+                </div>
+                <div class="menu-item" data-category="pizza">
+                    <img src="/images/pizza2.jpg" alt="pizza 2">
+                    <h3>Four Cheese pizza</h3>
+                    <p class="minfo">Great combination of cheddar cheese, mozzarella cheese, processed cheese and white cheese</p>
+                    <p class="price">Rs.399</p>
+                    <button class="buy-btn" onclick="addToCart('Four Cheese pizza', 399)">Buy</button>
+                </div>
+                <div class="menu-item" data-category="pizza">
+                    <img src="/images/pizza3.jpeg" alt="pizza 3">
+                    <h3>Farm House Pizza</h3>
+                    <p class="minfo">A classic pizza topped with fresh, crisp vegetables, flavorful herbs, and a rich blend of cheese for a wholesome, delicious taste.</p>
+                    <p class="price">Rs.450</p>
+                    <button class="buy-btn" onclick="addToCart('Farm House Pizza', 450)">Buy</button>
+                </div>
+                <div class="menu-item" data-category="pizza">
+                    <img src="/images/pizza4.jpg" alt="pizza 4">
+                    <h3>Corn Veggie Pizza</h3>
+                    <p class="minfo">Enjoy the delightful flavours of golden corn, crunchy peppers, onions & cheese with classic pizza.</p>
+                    <p class="price">Rs.410</p>
+                    <button class="buy-btn" onclick="addToCart('Corn Veggie Pizza', 410)">Buy</button>
+                </div>
+                <div class="menu-item" data-category="coffee">
+                    <img src="/images/coffee1.jpeg" alt="coffee 1">
+                    <h3>Mocha</h3>
+                    <p class="minfo">Bold espresso over rich chocolate with steamed milk.</p>
+                    <p class="price">Rs.160</p>
+                    <button class="buy-btn" onclick="addToCart('Mocha', 160)">Buy</button>
+                </div>
+                <div class="menu-item" data-category="coffee">
+                    <img src="/images/coffee2.jpg" alt="coffee 1">
+                    <h3>Cappuccino</h3>
+                    <p class="minfo">Steamed milk and milk foam poured over espresso made using our signature blend</p>
+                    <p class="price">Rs.180</p>
+                    <button class="buy-btn" onclick="addToCart('Cappuccino', 180)">Buy</button>
+                </div>
+                <div class="menu-item" data-category="coffee">
+                    <img src="/images/coffee3.jpg" alt="coffee 3">
+                    <h3>Iced Latte</h3>
+                    <p class="minfo">Our classic latte made with espresso shot and milk</p>
+                    <p class="price">Rs.240</p>
+                    <button class="buy-btn" onclick="addToCart('Iced Latte', 240)">Buy</button>
+                </div>
+                <div class="menu-item" data-category="coffee">
+                    <img src="/images/coffee4.jpg" alt="coffee 4">
+                    <h3>Chocolate Cold Coffee</h3>
+                    <p class="minfo">Yearning for perfect amalgamation of chocolate and coffee? Look no further</p>
+                    <p class="price">Rs.220</p>
+                    <button class="buy-btn" onclick="addToCart('Chocolate Cold Coffee', 220)">Buy</button>
+                </div>
+                <div class="menu-item" data-category="desserts">
+                    <img src="/images/strawberry-pancakes-.jpg" alt="desserts 1">
+                    <h3>Strawberry Pancakes</h3>
+                    <p class="minfo">Vanilla pancakes with fresh strawberries, cream, vanilla ice cream and strawberry syrup.</p>
+                    <p class="price">Rs.336</p>
+                    <button class="buy-btn" onclick="addToCart('Strawberry Pancakes', 336)">Buy</button>
+                </div>
+                <div class="menu-item" data-category="desserts">
+                    <img src="/images/chocolate-chip-pancakes.jpg" alt="desserts 2">
+                    <h3>Chocolate Chip Pancakes</h3>
+                    <p class="minfo">4 layered chocolate pancake drizzled with chocolate sauce and topped with choco chips.</p>
+                    <p class="price">Rs.398</p>
+                    <button class="buy-btn" onclick="addToCart('Chocolate Chip Pancakes', 398)">Buy</button>
+                </div>
+                <div class="menu-item" data-category="desserts">
+                    <img src="/images/nutella_brownie.jpg" alt="desserts 1">
+                    <h3>Nutella Brownies</h3>
+                    <p class="minfo">Gooey, fudgy brownies made with high-quality chocolate and topped with smooth Nutella.</p>
+                    <p class="price">Rs.120</p>
+                    <button class="buy-btn" onclick="addToCart('Nutella Brownies', 120)">Buy</button>
+                </div>
+                <div class="menu-item" data-category="desserts">
+                    <img src="/images/cheesecake.jpeg" alt="desserts 1">
+                    <h3>NYC delight Cheesecake</h3>
+                    <p class="minfo">Velvety cheesecake with creamy richness, sour cream tangy and cracking crumble.</p>
+                    <p class="price">Rs.230</p>
+                    <button class="buy-btn" onclick="addToCart('NYC delight Cheesecake', 230)">Buy</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        <section id="review">
+            <h2>Customer Reviews</h2>
+            <div class="comments-container">
+                <div class="comment-card">
+                    <img src="/images/photo.jpg" alt="Avatar" class="avatar">
+                    <div class="comment-content">
+                        <h3>Henry</h3>
+                        <p>"Absolutely loved the variety of pasta and desserts—every bite was a delight! Perfect spot for a cozy coffee break too!"</p>
+                    </div>
+                </div>
+                <div class="comment-card">
+                    <img src="/images/photo1.jpg" alt="Avatar" class="avatar">
+                    <div class="comment-content">
+                        <h3>Khushi</h3>
+                        <p>"A hidden gem with delicious food and a warm ambiance. Their pasta and desserts are to die for!"</p>
+                    </div>
+                </div>
+                <div class="comment-card">
+                    <img src="/images/photo2.jpg" alt="Avatar" class="avatar">
+                    <div class="comment-content">
+                        <h3>Hetvi</h3>
+                        <p>"The best spot for coffee and a sweet treat. The desserts are a must-try!"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <section id="contact">
+        <div class="contact-form-section">
+            <div class="form-container">
+                <h2>Contacts</h2>
+                <form id="contactForm">
+                    <label for="name">Enter your name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="phone">Your phone number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="message">Enter message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">I consent to the processing of my personal data according to the rules.</label>
+                    </div>
+
+                    <button type="submit" class="submit-button">Submit</button>
+                    <div id="notification"></div>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <h3>Contact us in a convenient way:</h3>
+                <p><strong>Phone:</strong><br>
+                +919675437829<br>
+                +917345692348</p>
+                <p><strong>Email:</strong><br>
+                hellyshaven@gmail.com</p>
+                <button class="learn-more-button">Learn more</button>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About us</h4>
+                    <ul>
+                        <li><a href="#menu">Price</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#service">Delivery</a></li>
+                        <li><a href="#service">Book a table</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Schedule</h4>
+                    <ul>
+                        <li><a href="#">Mo-Fr: 11:00 am - 12:00 pm</a></li>
+                        <li><a href="#">Sa-Su: 12:00 am - 12:00 pm</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </footer>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

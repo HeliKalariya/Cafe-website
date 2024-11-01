@@ -16,5 +16,5 @@ Link to My Website: https://hellys-haven.netlify.app/
 <br>
 ![cart](https://github.com/user-attachments/assets/83262c72-05b4-46bd-a03b-79edd236c4bf)
 
-<img src="C:\Users\kalar\OneDrive\Desktop\main page.png">
+<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/181923514/382214752-95718588-ff23-450d-83a7-1323cb05b0e9.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20241101%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20241101T074529Z&X-Amz-Expires=300&X-Amz-Signature=f30178bbbb0960c6c8f406e42f997b97b22ea1677ba4a970f8738a9deda1879c&X-Amz-SignedHeaders=host">
 !https://github.com/user-attachments/assets/243a4d02-edbc-43be-9b1e-7ef1be8a774c

@@ -15,3 +15,5 @@ Link to My Website: https://hellys-haven.netlify.app/
 ![customer](https://github.com/user-attachments/assets/900e1fe8-20e0-4d6e-b516-83d1ff35ff12)
 <br>
 ![cart](https://github.com/user-attachments/assets/83262c72-05b4-46bd-a03b-79edd236c4bf)
+
+<img src="C:\Users\kalar\OneDrive\Desktop\main page.png">
